@@ -7,18 +7,22 @@ export default async function handler(req, res) {
 
     const huggingfaceUrl = `https://huggingface.co/${req.body.modelName}`
   
+    console.log('Sending huggingface GET request');
+
     const response = await fetch(huggingfaceUrl, {
       method: "GET",
     });
+
+    console.log('Received huggingface GET response');
   
     if (response.status == 400 || response.status == 500) {
-      let error = await response.json();
       res.statusCode = 500;
       res.end(JSON.stringify({ detail: error.detail }));
       return;
     }
+
+    console.log('Response is reasonable');
   
-    const prediction = await response.json();
     res.statusCode = 201;
     res.end(JSON.stringify(prediction));
   }

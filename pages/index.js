@@ -20,9 +20,13 @@ export default function Home() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    console.log('Assembling body');
+
     const body = {
       modelName: e.target.prompt.value,
     };
+
+    console.log('Assembled body');
 
     const response = await fetch("/api/validation", {
       method: "POST",
@@ -32,13 +36,16 @@ export default function Home() {
       body: JSON.stringify(body),
     });
 
+    console.log('Received response');
+
     if (response.status == 400 || response.status == 500) {
       setError('Validation failed!');
       return;
     }
-    
-    setPredictions('Validation succeeded!');
 
+    console.log('Validation succeeded');
+
+    setPredictions('Validation succeeded!');
   };
 
   const startOver = async (e) => {
