@@ -45,12 +45,12 @@ export default function Home() {
 
     console.log('Validation succeeded');
 
-    setPredictions(['Validation succeeded!']);
+    setPredictions('Validation succeeded!');
   };
 
   const startOver = async (e) => {
     e.preventDefault();
-    setPredictions([]);
+    setPredictions(null);
     setError(null);
   };
 
@@ -63,13 +63,9 @@ export default function Home() {
           <PromptForm onSubmit={handleSubmit} />
 
           <div className="text-center">
-            {((predictions.length > 0 &&
-              predictions[predictions.length - 1].output)) && (
-              <button className="lil-button" onClick={startOver}>
-                <StartOverIcon className="icon" />
-                Start over
-              </button>
-            )}
+            { 
+            predictions && (<p>validated</p>)
+            }
           </div>
         </div>
       </main>
