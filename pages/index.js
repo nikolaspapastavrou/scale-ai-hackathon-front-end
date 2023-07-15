@@ -101,11 +101,9 @@ export default function Home() {
             // style={{ height: 0, paddingBottom: "100%" }}
           >
                           <ReactSketchCanvas
-                ref={this.canvas}
                 strokeWidth={80}
                 strokeColor="black"
                 canvasColor="transparent"
-                onChange={this.onChange}
               />
           </div>
         </div>
