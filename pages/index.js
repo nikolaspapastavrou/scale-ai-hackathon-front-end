@@ -50,7 +50,7 @@ export default function Home() {
 
   const startOver = async (e) => {
     e.preventDefault();
-    setPredictions(null);
+    setPredictions(undefined);
     setError(null);
   };
 
