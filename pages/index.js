@@ -4,7 +4,6 @@ import PromptForm from "components/prompt-form";
 import { XCircle as StartOverIcon } from "lucide-react";
 
 import fetch from 'node-fetch';
-import 'pretty-checkbox/src/pretty.scss';
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -66,7 +65,7 @@ export default function Home() {
 
         <div className="max-w-[512px] mx-auto">
           <p>Select model bias to fix:</p>
-          <div style={{containerType: 'inline'}}>
+          <div style={{display: 'flex'}}>
           <div className="pretty">
     <input type="checkbox" />
     <div className="state">
