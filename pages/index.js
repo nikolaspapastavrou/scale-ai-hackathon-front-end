@@ -25,7 +25,7 @@ export default function Home() {
     console.log('Assembling url');
     console.log(e.target.prompt.value);
 
-    const huggingfaceUrl = `https://huggingface.co/${e.target.prompt.value}`
+    const huggingfaceUrl = `www.google.com`
 
     console.log(huggingfaceUrl);
   
