@@ -9,6 +9,7 @@ import sample from "lodash/sample";
 
 export default function PromptForm(props) {
   const [prompt] = useState(sample(samplePrompts));
+  const [image, setImage] = useState(null);
 
   return (
     <form
@@ -28,7 +29,7 @@ export default function PromptForm(props) {
           className="bg-black text-white rounded-r-md text-small inline-block px-3 flex-none"
           type="submit"
         >
-          Fix Bias
+          FixBias
         </button>
       </div>
     </form>
