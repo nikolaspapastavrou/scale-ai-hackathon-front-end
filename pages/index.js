@@ -96,8 +96,7 @@ export default function Home() {
     </div>
   </div> 
           </div>
-          <textarea name="comments" id="comments" style="width:96%;height:90px;background-color:gold;color:olive;border:none;padding:2%;font:22px/30px sans-serif;">
-          </textarea>
+          <textarea name="comments" id="comments"></textarea>
         </div>
       </main>
     </div>
