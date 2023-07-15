@@ -1,14 +1,9 @@
 import { useState } from "react";
 
 const samplePrompts = [
-  "a gentleman otter in a 19th century portrait",
-  "bowl of ramen in the style of a comic book",
-  "flower field drawn by Jean-Jacques Sempé",
-  "illustration of a taxi cab in the style of r crumb",
-  "multicolor hyperspace",
-  "painting of fruit on a table in the style of Raimonds Staprans",
-  "pencil sketch of robots playing poker",
-  "photo of an astronaut riding a horse",
+  "tiiuae/falcon-7b-instruct",
+  "tiiuae/falcon-40b-instruct",
+  "openlm-research/open_llama_13b",
 ];
 import sample from "lodash/sample";
 
@@ -26,7 +21,7 @@ export default function PromptForm(props) {
           type="text"
           defaultValue={prompt}
           name="prompt"
-          placeholder="Enter a prompt..."
+          placeholder="Enter a Hugging Face model name..."
           className="block w-full flex-grow rounded-l-md"
         />
 
