@@ -96,8 +96,8 @@ export default function Home() {
     </div>
   </div> 
           </div>
-          <textarea name="comments" id="comments"></textarea>
         </div>
+        <textarea name="comments" id="comments"></textarea>
       </main>
     </div>
   );
