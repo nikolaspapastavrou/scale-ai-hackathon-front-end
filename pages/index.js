@@ -65,9 +65,9 @@ export default function Home() {
 
         <div className="max-w-[512px] mx-auto">
           <p>Gender Bias</p>
-          <div class="pretty p-default">
+          <div className="pretty p-default">
     <input type="checkbox" />
-    <div class="state">
+    <div className="state">
       <label>Check me</label>
     </div>
   </div> 
