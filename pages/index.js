@@ -96,17 +96,8 @@ export default function Home() {
     </div>
   </div> 
           </div>
-          <div
-            className="bg-gray-50 relative max-h-[512px] w-full flex items-stretch"
-            // style={{ height: 0, paddingBottom: "100%" }}
-          >
-                          <ReactSketchCanvas
-                strokeWidth={80}
-                strokeColor="transparent"
-                canvasColor="transparent"
-                paddingTop= "5em"
-              />
-          </div>
+          <textarea name="comments" id="comments" style="width:96%;height:90px;background-color:gold;color:olive;border:none;padding:2%;font:22px/30px sans-serif;">
+          </textarea>
         </div>
       </main>
     </div>
