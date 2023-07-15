@@ -71,6 +71,12 @@ export default function Home() {
       <label>Gender Bias</label>
     </div>
   </div> 
+  <div className="pretty p-default">
+    <input type="checkbox" />
+    <div className="state">
+      <label>Racial Bias</label>
+    </div>
+  </div> 
         </div>
       </main>
     </div>
