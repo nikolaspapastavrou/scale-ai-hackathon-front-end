@@ -87,14 +87,12 @@ export default function Home() {
                 Start over
               </button>
             )}
-
-            <Download predictions={predictions} />
           </div>
         </div>
         <div className="border-hairline max-w-[512px] mx-auto relative">
           <Dropzone
             onImageDropped={setUserUploadedImage}
-            predictions={predictions}
+            predictions={[]}
             userUploadedImage={userUploadedImage}
           />
           <div
@@ -102,7 +100,7 @@ export default function Home() {
             // style={{ height: 0, paddingBottom: "100%" }}
           >
             <Canvas
-              predictions={predictions}
+              predictions={[]}
               userUploadedImage={userUploadedImage}
               onDraw={setMaskImage}
             />
