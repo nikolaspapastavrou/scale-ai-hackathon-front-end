@@ -32,11 +32,12 @@ export default function Home() {
       body: JSON.stringify(body),
     });
 
-    if (response.status !== 201) {
+    if (response.status == 400 || response.status == 500) {
       setError('Validation failed!');
       return;
     }
-    setPredictions('Validated succeeded!');
+    
+    setPredictions('Validation succeeded!');
 
   };
 

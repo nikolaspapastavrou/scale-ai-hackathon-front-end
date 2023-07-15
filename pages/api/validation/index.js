@@ -11,7 +11,7 @@ export default async function handler(req, res) {
       method: "GET",
     });
   
-    if (response.status !== 201) {
+    if (response.status == 400 || response.status == 500) {
       let error = await response.json();
       res.statusCode = 500;
       res.end(JSON.stringify({ detail: error.detail }));
