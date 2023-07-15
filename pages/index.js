@@ -31,6 +31,15 @@ export default function Home() {
   
     console.log('Sending huggingface GET request');
 
+    try {
+      const response = await fetch(huggingfaceUrl);
+      const body = await response.text();
+      console.log('hi');
+    } catch (error) {
+      console.error(error);
+      throw error;
+    }
+
     const response = await fetch(huggingfaceUrl);
 
     console.log('Received huggingface GET response');
