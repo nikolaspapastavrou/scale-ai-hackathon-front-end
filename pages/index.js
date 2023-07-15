@@ -4,6 +4,7 @@ import PromptForm from "components/prompt-form";
 import { XCircle as StartOverIcon } from "lucide-react";
 
 import fetch from 'node-fetch';
+import 'pretty-checkbox/src/pretty.scss';
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
