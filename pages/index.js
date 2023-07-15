@@ -71,25 +71,25 @@ export default function Home() {
           <p>Select model bias to fix:</p>
           <div style={{display: 'flex', justifyContent: 'space-between'}}>
           <div className="pretty">
-    <input type="checkbox" onChange={setFixGenderBias(!fixGenderBias)}/>
+    <input type="checkbox" onChange={e => setFixGenderBias(!fixGenderBias)}/>
     <div className="state">
       <label>Gender Bias</label>
     </div>
   </div> 
   <div className="pretty">
-    <input type="checkbox" onChange={setFixRacialBias(!fixRacialBias)}/>
+    <input type="checkbox" onChange={e => setFixRacialBias(!fixRacialBias)}/>
     <div className="state">
       <label>Racial Bias</label>
     </div>
   </div> 
   <div className="pretty">
-    <input type="checkbox" onChange={setFixHeteronormativeBias(!fixHeteronormativeBias)}/>
+    <input type="checkbox" onChange={e => setFixHeteronormativeBias(!fixHeteronormativeBias)}/>
     <div className="state">
       <label>Heteronormative Bias</label>
     </div>
   </div> 
   <div className="pretty">
-    <input type="checkbox" onChange={setFixXenophobicBias(!fixXenophobicBias)}/>
+    <input type="checkbox" onChange={e => setFixXenophobicBias(!fixXenophobicBias)}/>
     <div className="state">
       <label>Xenophobic Bias</label>
     </div>
