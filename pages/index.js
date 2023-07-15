@@ -2,6 +2,7 @@ import { useState } from "react";
 import Head from "next/head";
 import PromptForm from "components/prompt-form";
 import { XCircle as StartOverIcon } from "lucide-react";
+import { ReactSketchCanvas } from "react-sketch-canvas";
 
 import fetch from 'node-fetch';
 
@@ -99,6 +100,13 @@ export default function Home() {
             className="bg-gray-50 relative max-h-[512px] w-full flex items-stretch"
             // style={{ height: 0, paddingBottom: "100%" }}
           >
+                          <ReactSketchCanvas
+                ref={this.canvas}
+                strokeWidth={80}
+                strokeColor="black"
+                canvasColor="transparent"
+                onChange={this.onChange}
+              />
           </div>
         </div>
       </main>
