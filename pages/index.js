@@ -64,11 +64,11 @@ export default function Home() {
         </div>
 
         <div className="max-w-[512px] mx-auto">
-          <p>Gender Bias</p>
+          <p>Select model bias to fix:</p>
           <div className="pretty p-default">
     <input type="checkbox" />
     <div className="state">
-      <label>Check me</label>
+      <label>Gender Bias</label>
     </div>
   </div> 
         </div>
