@@ -78,6 +78,18 @@ export default function Home() {
       <label>Racial Bias</label>
     </div>
   </div> 
+  <div className="pretty">
+    <input type="checkbox" />
+    <div className="state">
+      <label>Heteronormative Bias</label>
+    </div>
+  </div> 
+  <div className="pretty">
+    <input type="checkbox" />
+    <div className="state">
+      <label>Xenophobic Bias</label>
+    </div>
+  </div> 
           </div>
         </div>
       </main>
