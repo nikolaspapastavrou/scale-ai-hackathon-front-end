@@ -23,9 +23,9 @@ export default function Dropzone(props) {
       <div className="m-auto">
         <input {...getInputProps()} />
         {isDragActive ? (
-          <p>Drop the image here ...</p>
+          <p>Drop the dataset here ...</p>
         ) : (
-          <p>Optional: Drag and drop a starting image here</p>
+          <p>Drag and drop the dataset here</p>
         )}
       </div>
     </div>
