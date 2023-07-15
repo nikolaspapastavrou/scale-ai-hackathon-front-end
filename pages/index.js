@@ -10,7 +10,11 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 export default function Home() {
   const [predictions, setPredictions] = useState([]);
   const [error, setError] = useState(null);
-  
+  const [fixGenderBias, setFixGenderBias] = useState(false);
+  const [fixRacialBias, setFixRacialBias] = useState(false);
+  const [fixHeteronormativeBias, setFixHeteronormativeBias] = useState(false);
+  const [fixXenophobicBias, setFixXenophobicBias] = useState(false);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -67,25 +71,25 @@ export default function Home() {
           <p>Select model bias to fix:</p>
           <div style={{display: 'flex', justifyContent: 'space-between'}}>
           <div className="pretty">
-    <input type="checkbox" />
+    <input type="checkbox" onChange={setFixGenderBias(!fixGenderBias)}/>
     <div className="state">
       <label>Gender Bias</label>
     </div>
   </div> 
   <div className="pretty">
-    <input type="checkbox" />
+    <input type="checkbox" onChange={setFixRacialBias(!fixRacialBias)}/>
     <div className="state">
       <label>Racial Bias</label>
     </div>
   </div> 
   <div className="pretty">
-    <input type="checkbox" />
+    <input type="checkbox" onChange={setFixHeteronormativeBias(!fixHeteronormativeBias)}/>
     <div className="state">
       <label>Heteronormative Bias</label>
     </div>
   </div> 
   <div className="pretty">
-    <input type="checkbox" />
+    <input type="checkbox" onChange={setFixXenophobicBias(!fixXenophobicBias)}/>
     <div className="state">
       <label>Xenophobic Bias</label>
     </div>
