@@ -25,7 +25,7 @@ export default function Home() {
     console.log('Assembling url');
     console.log(e.target.prompt.value);
 
-    const huggingfaceUrl = e.target.prompt.value;
+    const huggingfaceUrl = `wwww.huggingface.co/${req.body.modelName}`
 
     console.log(huggingfaceUrl);
   
