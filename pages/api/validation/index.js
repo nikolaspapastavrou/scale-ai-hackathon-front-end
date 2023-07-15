@@ -7,10 +7,6 @@ export default async function handler(req, res) {
 
     const huggingfaceUrl = `https://huggingface.co/${req.body.modelName}`
   
-    if (req.body.mask) {
-      req.body.mask = addBackgroundToPNG(req.body.mask);
-    }
-  
     const response = await fetch(huggingfaceUrl, {
       method: "GET",
     });

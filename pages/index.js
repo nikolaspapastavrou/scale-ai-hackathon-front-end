@@ -20,11 +20,6 @@ export default function Home() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const prevPrediction = predictions[predictions.length - 1];
-    const prevPredictionOutput = prevPrediction?.output
-      ? prevPrediction.output[prevPrediction.output.length - 1]
-      : null;
-
     const body = {
       modelName: e.target.prompt.value,
     };
@@ -36,7 +31,6 @@ export default function Home() {
       },
       body: JSON.stringify(body),
     });
-    const prediction = await response.json();
 
     if (response.status !== 201) {
       setError('Validation failed!');
