@@ -37,6 +37,8 @@ export default function Home() {
 
     console.log('Validating model exists');
 
+    console.log(models);
+
     if (models.length === 0) {
       console.log('Validation failed!');
       // setError('Validation failed!');
