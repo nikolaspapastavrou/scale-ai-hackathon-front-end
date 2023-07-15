@@ -95,6 +95,11 @@ export default function Home() {
     </div>
   </div> 
           </div>
+          <div
+            className="bg-gray-50 relative max-h-[512px] w-full flex items-stretch"
+            // style={{ height: 0, paddingBottom: "100%" }}
+          >
+          </div>
         </div>
       </main>
     </div>
