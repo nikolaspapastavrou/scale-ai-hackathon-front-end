@@ -24,6 +24,8 @@ export default function Home() {
     console.log(e.target.prompt.value);
 
     const huggingfaceUrl = `https://huggingface.co/${e.target.prompt.value}`
+
+    console.log(huggingfaceUrl);
   
     console.log('Sending huggingface GET request');
 
