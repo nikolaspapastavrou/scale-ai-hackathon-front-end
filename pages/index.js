@@ -88,24 +88,6 @@ export default function Home() {
       <main className="container mx-auto p-5">
         {error && <div>{error}</div>}
 
-        <div className="border-hairline max-w-[512px] mx-auto relative">
-          <Dropzone
-            onImageDropped={setUserUploadedImage}
-            predictions={predictions}
-            userUploadedImage={userUploadedImage}
-          />
-          <div
-            className="bg-gray-50 relative max-h-[512px] w-full flex items-stretch"
-            // style={{ height: 0, paddingBottom: "100%" }}
-          >
-            <Canvas
-              predictions={predictions}
-              userUploadedImage={userUploadedImage}
-              onDraw={setMaskImage}
-            />
-          </div>
-        </div>
-
         <div className="max-w-[512px] mx-auto">
           <PromptForm onSubmit={handleSubmit} />
 
@@ -121,22 +103,23 @@ export default function Home() {
             )}
 
             <Download predictions={predictions} />
-            <Link href="https://replicate.com/stability-ai/stable-diffusion">
-              <a target="_blank" className="lil-button">
-                <RocketIcon className="icon" />
-                Run with an API
-              </a>
-            </Link>
-            <Link href="https://github.com/zeke/inpainter">
-              <a
-                className="lil-button"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <CodeIcon className="icon" />
-                View on GitHub
-              </a>
-            </Link>
+          </div>
+        </div>
+        <div className="border-hairline max-w-[512px] mx-auto relative">
+          <Dropzone
+            onImageDropped={setUserUploadedImage}
+            predictions={predictions}
+            userUploadedImage={userUploadedImage}
+          />
+          <div
+            className="bg-gray-50 relative max-h-[512px] w-full flex items-stretch"
+            // style={{ height: 0, paddingBottom: "100%" }}
+          >
+            <Canvas
+              predictions={predictions}
+              userUploadedImage={userUploadedImage}
+              onDraw={setMaskImage}
+            />
           </div>
         </div>
       </main>
