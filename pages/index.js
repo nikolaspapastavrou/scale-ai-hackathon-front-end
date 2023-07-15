@@ -27,9 +27,7 @@ export default function Home() {
   
     console.log('Sending huggingface GET request');
 
-    const response = await fetch(huggingfaceUrl, {
-      method: "GET",
-    });
+    const response = await fetch(huggingfaceUrl);
 
     console.log('Received huggingface GET response');
 
