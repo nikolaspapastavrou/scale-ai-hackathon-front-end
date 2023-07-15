@@ -22,7 +22,8 @@
     "react-dom": "18.2.0",
     "react-dropzone": "^14.2.2",
     "react-sketch-canvas": "^6.2.0",
-    "pretty-checkbox": "3.0.3"
+    "pretty-checkbox": "3.0.3",
+    "@mui/material": "5.14.0"
   },
   "devDependencies": {
     "@types/node": "^18.11.3",
