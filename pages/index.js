@@ -20,32 +20,27 @@ export default function Home() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log('Assembling body');
+    console.log('Assembling url');
 
-    const body = {
-      modelName: e.target.prompt.value,
-    };
+    const huggingfaceUrl = `https://huggingface.co/${e.target.prompt.value}`
+  
+    console.log('Sending huggingface GET request');
 
-    console.log('Assembled body');
-
-    const response = await fetch("/api/validation", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(body),
+    const response = await fetch(huggingfaceUrl, {
+      method: "GET",
     });
 
-    console.log('Received response');
+    console.log('Received huggingface GET response');
 
     if (response.status == 400 || response.status == 500) {
-      setError('Validation failed!');
+      console.log('Validation failed!');
+      // setError('Validation failed!');
       return;
     }
 
     console.log('Validation succeeded');
 
-    setPredictions('Validation succeeded!');
+    // setPredictions('Validation succeeded!');
   };
 
   const startOver = async (e) => {
