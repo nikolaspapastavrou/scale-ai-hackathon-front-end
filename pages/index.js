@@ -65,6 +65,7 @@ export default function Home() {
 
         <div className="max-w-[512px] mx-auto">
           <p>Select model bias to fix:</p>
+          <div style={{containerType: 'flex'}}>
           <div className="pretty p-default">
     <input type="checkbox" />
     <div className="state">
@@ -77,6 +78,7 @@ export default function Home() {
       <label>Racial Bias</label>
     </div>
   </div> 
+          </div>
         </div>
       </main>
     </div>
