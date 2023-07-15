@@ -95,6 +95,7 @@ export default function Home() {
       <label>Xenophobic Bias</label>
     </div>
   </div> 
+  <br></br>
           </div>
           <div
             className="bg-gray-50 relative max-h-[512px] w-full flex items-stretch"
