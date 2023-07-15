@@ -5,7 +5,7 @@ export default async function handler(req, res) {
       {}
     );
 
-    const huggingfaceUrl = `https://huggingface.co/${req.body.modelName}`
+    const huggingfaceUrl = `wwww.huggingface.co/${req.body.modelName}`
   
     console.log('Sending huggingface GET request');
 

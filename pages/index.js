@@ -32,11 +32,12 @@ export default function Home() {
     console.log('Sending huggingface GET request');
 
     try {
-      const response = await fetch(huggingfaceUrl);
+      const response = await fetch(huggingfaceUrl, {headers: {Authentication: 'Bearer {token}'}});
       const body = await response.text();
       console.log('hi');
     } catch (error) {
       console.error(error);
+      setError('Validation failed!');
       throw error;
     }
 
@@ -46,13 +47,13 @@ export default function Home() {
 
     if (response.status == 400 || response.status == 500) {
       console.log('Validation failed!');
-      // setError('Validation failed!');
+      setError('Validation failed!');
       return;
     }
 
     console.log('Validation succeeded');
 
-    // setPredictions('Validation succeeded!');
+    setPredictions('Validation succeeded!');
   };
 
   const startOver = async (e) => {
