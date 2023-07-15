@@ -25,14 +25,14 @@ export default function Home() {
     console.log('Assembling url');
     console.log(e.target.prompt.value);
 
-    const huggingfaceUrl = `wwww.huggingface.co/${req.body.modelName}`
+    const huggingfaceUrl = `wwww.huggingface.co/${e.target.prompt.value}`;
 
     console.log(huggingfaceUrl);
   
     console.log('Sending huggingface GET request');
 
     try {
-      const response = await fetch(huggingfaceUrl, {headers: {Authentication: 'Bearer {token}'}});
+      const response = await fetch(huggingfaceUrl);
       const body = await response.text();
       console.log('hi');
     } catch (error) {
