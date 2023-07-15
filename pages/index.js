@@ -3,7 +3,6 @@ import Head from "next/head";
 import PromptForm from "components/prompt-form";
 import { XCircle as StartOverIcon } from "lucide-react";
 import { ReactSketchCanvas } from "react-sketch-canvas";
-import { Box } from '@mui/material';
 
 import fetch from 'node-fetch';
 
@@ -97,16 +96,16 @@ export default function Home() {
     </div>
   </div> 
           </div>
-          <div style={{ 
-            marginLeft: '40%', 
-            marginTop: '60px', 
-            width: '30%' 
-        }}>
-            <Box color="white" 
-                bgcolor="palevioletred" p={1}>
-                Greetings from GeeksforGeeks!
-            </Box>
-        </div>
+          <div
+            className="bg-gray-50 relative max-h-[512px] w-full flex items-stretch"
+            // style={{ height: 0, paddingBottom: "100%" }}
+          >
+                          <ReactSketchCanvas
+                strokeWidth={80}
+                strokeColor="transparent"
+                canvasColor="transparent"
+              />
+          </div>
         </div>
       </main>
     </div>
