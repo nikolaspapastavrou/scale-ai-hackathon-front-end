@@ -53,7 +53,7 @@ export default function Home() {
 
     console.log('Validation succeeded');
 
-    setPredictions('Validation succeeded!');
+    setPredictions(['Validation succeeded!']);
   };
 
   const startOver = async (e) => {
