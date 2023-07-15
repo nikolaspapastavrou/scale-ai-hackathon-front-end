@@ -61,12 +61,6 @@ export default function Home() {
 
         <div className="max-w-[512px] mx-auto">
           <PromptForm onSubmit={handleSubmit} />
-
-          <div className="text-center">
-            { 
-            predictions && (<p>validated</p>)
-            }
-          </div>
         </div>
       </main>
     </div>
