@@ -99,13 +99,11 @@ export default function Home() {
         </div>
         <div className="max-w-[512px] mx-auto">
         <form
-      onSubmit={props.onSubmit}
       className="py-5 animate-in fade-in duration-700"
     >
       <div className="flex max-w-[512px]">
         <input
           type="text"
-          defaultValue={prompt}
           name="prompt"
           placeholder="Enter a Hugging Face model name..."
           className="block w-full flex-grow rounded-l-md"
