@@ -26,17 +26,10 @@ export default function Home() {
       : null;
 
     const body = {
-      prompt: e.target.prompt.value,
-      init_image: userUploadedImage
-        ? await readAsDataURL(userUploadedImage)
-        : // only use previous prediction as init image if there's a mask
-        maskImage
-        ? prevPredictionOutput
-        : null,
-      mask: maskImage,
+      modelName: e.target.prompt.value,
     };
 
-    const response = await fetch("/api/predictions", {
+    const response = await fetch("/api/validation", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -46,28 +39,11 @@ export default function Home() {
     const prediction = await response.json();
 
     if (response.status !== 201) {
-      setError(prediction.detail);
+      setError('Validation failed!');
       return;
     }
-    setPredictions(predictions.concat([prediction]));
+    setPredictions('Validated succeeded!');
 
-    while (
-      prediction.status !== "succeeded" &&
-      prediction.status !== "failed"
-    ) {
-      await sleep(1000);
-      const response = await fetch("/api/predictions/" + prediction.id);
-      prediction = await response.json();
-      if (response.status !== 200) {
-        setError(prediction.detail);
-        return;
-      }
-      setPredictions(predictions.concat([prediction]));
-
-      if (prediction.status === "succeeded") {
-        setUserUploadedImage(null);
-      }
-    }
   };
 
   const startOver = async (e) => {
