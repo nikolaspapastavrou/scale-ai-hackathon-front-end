@@ -62,6 +62,10 @@ export default function Home() {
         <div className="max-w-[512px] mx-auto">
           <PromptForm onSubmit={handleSubmit} />
         </div>
+
+        <div className="max-w-[512px] mx-auto">
+          <p> hi</p>
+        </div>
       </main>
     </div>
   );
