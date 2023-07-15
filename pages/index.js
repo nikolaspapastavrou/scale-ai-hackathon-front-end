@@ -65,16 +65,13 @@ export default function Home() {
 
         <div className="max-w-[512px] mx-auto">
           <p>Gender Bias</p>
+          <div class="pretty p-default">
+    <input type="checkbox" />
+    <div class="state">
+      <label>Check me</label>
+    </div>
+  </div> 
         </div>
-
-        <div className="max-w-[512px] mx-auto">
-          <p>Racial Bias</p>
-        </div>
-
-        <div className="max-w-[512px] mx-auto">
-          <p>Heteronormativity Bias</p>
-        </div>
-
       </main>
     </div>
   );
