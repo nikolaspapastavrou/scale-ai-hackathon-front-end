@@ -64,8 +64,17 @@ export default function Home() {
         </div>
 
         <div className="max-w-[512px] mx-auto">
-          <p> hi</p>
+          <p>Gender Bias</p>
         </div>
+
+        <div className="max-w-[512px] mx-auto">
+          <p>Racial Bias</p>
+        </div>
+
+        <div className="max-w-[512px] mx-auto">
+          <p>Heteronormativity Bias</p>
+        </div>
+
       </main>
     </div>
   );
