@@ -9,7 +9,7 @@ import { XCircle as StartOverIcon } from "lucide-react";
 import { Code as CodeIcon } from "lucide-react";
 import { Rocket as RocketIcon } from "lucide-react";
 
-import fetch from 'node-fetch';
+import fetch from '@vercel/fetch';
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
