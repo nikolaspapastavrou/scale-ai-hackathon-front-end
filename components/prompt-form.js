@@ -29,7 +29,7 @@ export default function PromptForm(props) {
           className="bg-black text-white rounded-r-md text-small inline-block px-3 flex-none"
           type="submit"
         >
-          FixBias
+          Fix Bias
         </button>
       </div>
     </form>

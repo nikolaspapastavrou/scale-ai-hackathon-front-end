@@ -105,7 +105,7 @@ export default function Home() {
         <input
           type="text"
           name="prompt"
-          placeholder="Enter a Hugging Face model name..."
+          placeholder="Enter a prompt..."
           className="block w-full flex-grow rounded-l-md"
         />
 
