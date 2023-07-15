@@ -8,7 +8,9 @@ import Download from "components/download";
 import { XCircle as StartOverIcon } from "lucide-react";
 import { Code as CodeIcon } from "lucide-react";
 import { Rocket as RocketIcon } from "lucide-react";
-import { listModels, Credentials } from "@huggingface/hub";
+
+import fetch from 'node-fetch';
+
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 export default function Home() {
@@ -27,19 +29,13 @@ export default function Home() {
 
     console.log(huggingfaceUrl);
   
-    console.log('Setting credentials');
+    console.log('Sending huggingface GET request');
 
-    const credentials = { accessToken: "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" };
+    const response = await fetch(huggingfaceUrl);
 
-    console.log('Listing mdoels');
+    console.log('Received huggingface GET response');
 
-    const models = await listModels({hubUrl: huggingfaceUrl, credentials});
-
-    console.log('Validating model exists');
-
-    console.log(models);
-
-    if (models.length === 0) {
+    if (response.status == 400 || response.status == 500) {
       console.log('Validation failed!');
       // setError('Validation failed!');
       return;
