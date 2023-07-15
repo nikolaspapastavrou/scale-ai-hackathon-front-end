@@ -66,13 +66,13 @@ export default function Home() {
         <div className="max-w-[512px] mx-auto">
           <p>Select model bias to fix:</p>
           <div style={{containerType: 'inline'}}>
-          <div className="pretty p-default">
+          <div className="pretty">
     <input type="checkbox" />
     <div className="state">
       <label>Gender Bias</label>
     </div>
   </div> 
-  <div className="pretty p-default">
+  <div className="pretty">
     <input type="checkbox" />
     <div className="state">
       <label>Racial Bias</label>
