@@ -95,7 +95,6 @@ export default function Home() {
       <label>Xenophobic Bias</label>
     </div>
   </div> 
-  <br></br>
           </div>
           <div
             className="bg-gray-50 relative max-h-[512px] w-full flex items-stretch"
@@ -105,6 +104,7 @@ export default function Home() {
                 strokeWidth={80}
                 strokeColor="transparent"
                 canvasColor="transparent"
+                paddingTop= "5em"
               />
           </div>
         </div>
