@@ -97,7 +97,9 @@ export default function Home() {
   </div> 
           </div>
         </div>
+        <div className="max-w-[512px] mx-auto">
         <textarea name="comments" id="comments"></textarea>
+        </div>
       </main>
     </div>
   );
