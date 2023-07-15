@@ -65,7 +65,7 @@ export default function Home() {
 
         <div className="max-w-[512px] mx-auto">
           <p>Select model bias to fix:</p>
-          <div style={{display: 'flex'}}>
+          <div style={{display: 'flex', justifyContent: 'space-between'}}>
           <div className="pretty">
     <input type="checkbox" />
     <div className="state">
