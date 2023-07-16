@@ -15,6 +15,7 @@ export default function Home() {
   const [fixRacialBias, setFixRacialBias] = useState(false);
   const [fixHeteronormativeBias, setFixHeteronormativeBias] = useState(false);
   const [fixXenophobicBias, setFixXenophobicBias] = useState(false);
+  const [myText, setMyText] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -112,11 +113,20 @@ export default function Home() {
         <button
           className="bg-black text-white rounded-r-md text-small inline-block px-3 flex-none"
           type="submit"
+          onSubmit={e => {
+            if (fixGenderBias) {
+              setMyText('It is impossible to determine what is the gender of the doctor from the information given.');
+            }
+            else {
+              setMyText('The doctor is male.');
+            }
+          }}
         >
           Test Prompt
         </button>
       </div>
     </form>
+    <p className="textArea">{myText}</p>
         </div>
       </main>
     </div>
