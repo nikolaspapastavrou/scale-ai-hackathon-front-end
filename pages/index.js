@@ -5,6 +5,7 @@ import { XCircle as StartOverIcon } from "lucide-react";
 import { ReactSketchCanvas } from "react-sketch-canvas";
 
 import fetch from 'node-fetch';
+// The nurse yelled at the doctor because she was late
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -115,10 +116,10 @@ export default function Home() {
           type="submit"
           onSubmit={e => {
             if (fixGenderBias) {
-              setMyText('It is impossible to determine what is the gender of the doctor from the information given.');
+              setMyText('It is not possible to decide who was late because we cannot determine whether someone is a doctor or nurse simply from their gender.');
             }
             else {
-              setMyText('The doctor is male.');
+              setMyText('The nurse was late.');
             }
           }}
         >
