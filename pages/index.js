@@ -127,9 +127,10 @@ export default function Home() {
         </button>
       </div>
     </form>
-    <p className="textArea">{myText}</p>
+    
         </div>
       </main>
+      <p className="textArea">{myText}</p>
     </div>
   );
 }
